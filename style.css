@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  background-color: #222;
+  color: #fff;
+  overflow: hidden;
+}
+
+.screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(100%);
+}
+
+.screen.active {
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.insects-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0;
+}
+
+.choose-insect-btn {
+  border: none;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.choose-insect-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.game-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.time, .score {
+  position: absolute;
+  top: 20px;
+  font-size: 1.5rem;
+}
+
+.time {
+  left: 20px;
+}
+
+.score {
+  right: 20px;
+}
+
+.message {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.insect {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.insect img {
+  width: 50px;
+  height: 50px;
+}
+#restart-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
